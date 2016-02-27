@@ -9,7 +9,7 @@ exports.getDefaults = function getDefaults(features) {
     // Basically all the transformers that support "loose".
     // http://babeljs.io/docs/usage/loose/
     presets: [require("babel-preset-meteor")],
-    plugins: ["transform-class-properties"]
+    plugins: [require("transform-class-properties")]
   };
 
   if (features) {
