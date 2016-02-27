@@ -3,13 +3,13 @@ exports.getDefaults = function getDefaults(features) {
     compact: false,
     sourceMap: "inline",
     ast: false,
-    babelrc: true,
+    babelrc: false,
     // "Loose" mode gets us faster and more IE-compatible transpilations of:
     // classes, computed properties, modules, for-of, and template literals.
     // Basically all the transformers that support "loose".
     // http://babeljs.io/docs/usage/loose/
     presets: [require("babel-preset-meteor")],
-    plugins: []
+    plugins: ["transform-class-properties"]
   };
 
   if (features) {
